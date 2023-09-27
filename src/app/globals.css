@@ -2,11 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-body {
+@layer base {
+  :root {
+    --color-primary: 38 38 38;
+    --color-secondary: 245 245 245;
+    --color-accent: 70 130 180;
+  }
+  .dark {
+    --color-primary: 217 217 217;
+    --color-secondary: 28 28 28;
+    --color-accent: 95 158 160;
+  }
+  body {
+    @apply text-primary bg-secondary;
+  }
 }

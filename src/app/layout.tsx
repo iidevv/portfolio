@@ -1,8 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
+import NavBar from '../components/NavBar';
+import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Ilya Ilyich - Full Stack Developer",
@@ -15,8 +20,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <html lang="en" className="light" style={{ colorScheme: "light" }}>
+      <body className={roboto.className}>
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
+      </body>
+    </html >
   )
 }
