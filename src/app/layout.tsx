@@ -1,7 +1,7 @@
-import './globals.css'
+import './styles/globals.css'
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import NavBar from '../components/NavBar';
+import Header from '../components/Header';
 import Providers from './providers';
 
 const roboto = Roboto({
@@ -20,10 +20,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="light" style={{ colorScheme: "light" }}>
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body className={roboto.className}>
         <Providers>
-          <NavBar />
+          <Header />
           {children}
         </Providers>
       </body>

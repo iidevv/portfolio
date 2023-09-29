@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 38 38 38;
+    --color-secondary: 245 245 245;
+    --color-accent: 70 130 180;
+  }
+  .dark {
+    --color-primary: 217 217 217;
+    --color-secondary: 28 28 28;
+    --color-accent: 95 158 160;
+  }
+  body {
+    @apply text-primary bg-secondary;
+  }
+  .header {
+    @apply py-4 bg-secondary top-0 sticky z-10 shadow-sm shadow-primary/50;
+  }
+  .theme-switcher {
+    @apply flex items-center border rounded-sm px-2 py-1 uppercase text-sm tracking-wider;
+  }
+  .theme-switcher svg {
+    @apply w-4 md:mr-1;
+  }
+  .theme-switcher span {
+    @apply hidden md:block;
+  }
+  .logo__object {
+    stroke: rgb(var(--color-primary));
+  }
+  .logo__text {
+    fill: rgb(var(--color-primary));
+  }
+  .site-container {
+    @apply container mx-auto px-2;
+  }
+  .site-container--horizontal {
+    @apply flex items-center justify-between;
+  }
+  .menu {
+    @apply flex items-center justify-between;
+  }
+  .menu__link {
+    @apply px-2 py-1 uppercase text-sm font-medium hover:underline;
+  }
+  .menu__item:not(:last-child) {
+    @apply mr-1;
+  }
+  .nav {
+    @apply flex items-center justify-between gap-2;
+  }
+  .hero {
+    @apply text-white;
+    background: linear-gradient(
+      90deg,
+      #000033 0%,
+      #000000 85%,
+      #000000 86%,
+      #000033 100%
+    );
+  }
+  .hero__inner {
+    @apply flex items-center justify-between py-2;
+  }
+  .hero__title {
+    @apply text-3xl font-semibold mb-2;
+  }
+  .hero__text {
+    @apply mb-6;
+  }
+  .hero__text p:not(:last-child) {
+    @apply mb-2;
+  }
+  .hero-canvas {
+    @apply w-1/2 h-96;
+  }
+  .hero__links {
+    @apply flex items-center gap-2;
+  }
+  .button {
+    @apply bg-primary hover:bg-primary/80 text-secondary font-bold py-2 px-4 rounded border border-primary uppercase text-sm tracking-wider transition;
+  }
+  .button--transparent {
+    @apply bg-opacity-0 border-secondary;
+  }
+  .button--hero {
+    @apply text-black border-white hover:bg-white/0 hover:text-white bg-white;
+  }
+  .button--hero.button--transparent {
+    @apply text-white border-white bg-opacity-0 hover:bg-white hover:text-black;
+  }
+  .section-title {
+    @apply text-3xl font-semibold mb-6 uppercase tracking-wider inline-block;
+  }
+  .section-title:after {
+    content: "_";
+    @apply animate-console-cursor;
+  }
+  .about {
+    @apply py-12;
+  }
+  .about__content {
+    @apply mb-6
+  }
+  .about__content p:first-child {
+    @apply indent-4 mb-1;
+  } 
+}
