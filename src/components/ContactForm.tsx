@@ -49,7 +49,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <button className="button" type="submit">Submit</button>
         </form>
     );
 }

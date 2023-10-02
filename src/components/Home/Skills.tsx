@@ -1,38 +1,44 @@
 import React from 'react';
-
+import { LanguageIcon, InboxStackIcon, ServerStackIcon, CircleStackIcon, ShareIcon } from '@heroicons/react/24/solid';
 const Skills = () => {
     const skills = [
         {
-            title: "Languages & Technologies",
-            items: ["HTML, CSS (SCSS, BEM)", "JavaScript (ES6+)", "TypeScript"]
+            title: "Languages",
+            items: ["HTML, CSS (SCSS, BEM)", "JavaScript (ES6+)", "TypeScript", "PHP"],
+            icon: <LanguageIcon />
         },
         {
             title: "Frameworks & Libraries",
-            items: ["React.js", "Redux", "Tailwind CSS"]
+            items: ["React.js", "Next.js", "Redux", "Tailwind CSS"],
+            icon: <InboxStackIcon />
         },
         {
             title: "Backend",
-            items: ["Node.js/Express.js", "PHP",]
+            items: ["Node.js (Express.js)"],
+            icon: <ServerStackIcon />
         },
         {
             title: "Databases",
-            items: ["MongoDB", "MySQL"]
+            items: ["MongoDB", "MySQL"],
+            icon: <CircleStackIcon />
         },
         {
             title: "API",
-            items: ["RESTful API"]
+            items: ["RESTful API"],
+            icon: <ShareIcon />
         },
     ]
     return (
         <div className="skills">
-            {skills.map((skillSection, index) => (
-                <div className="skills__section" key={index}>
-                    <h3 className="skills__title">{skillSection.title}:</h3>
+            {skills.map((skillBlock, index) => (
+                <div className="skills__block" key={index}>
+                    <h3 className="skills__title">{skillBlock.title}</h3>
                     <ul className="skills__items">
-                        {skillSection.items && skillSection.items.map((item, itemIndex) => (
+                        {skillBlock.items && skillBlock.items.map((item, itemIndex) => (
                             <li className="skills__item" key={itemIndex}>{item}</li>
                         ))}
                     </ul>
+                    {skillBlock.icon}
                 </div>
             ))}
         </div>

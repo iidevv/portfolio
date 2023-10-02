@@ -21,7 +21,7 @@ const config: Config = {
     screens: {
       sm: '480px',
       md: '768px',
-      xl: '1100px',
+      xl: '1200px',
     },
     colors: {
       primary: 'rgba(var(--color-primary) / <alpha-value>)',

@@ -9,8 +9,8 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing'
 
 function HeroObject() {
     return (
-        <div className="hero-canvas">
-            <Canvas camera={{ position: [0, 0, 8] }}>
+        <div className="hero__object">
+            <Canvas camera={{ position: [0, 0, 6] }}>
                 <Float speed={4} rotationIntensity={1} floatIntensity={2}>
                     <Atom />
                 </Float>
