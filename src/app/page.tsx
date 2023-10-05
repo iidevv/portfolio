@@ -24,7 +24,7 @@ export default function Home() {
               </div>
               <div className="hero__links">
                 <a className="button button--hero" href="#projects">Projects</a>
-                <a className="button button--hero button--transparent" href="#">Resume</a>
+                <a className="button button--hero button--transparent" target="_blank" rel="noopener noreferrer" href="/ilya.ilyich.min.pdf">Resume</a>
               </div>
             </div>
             <HeroObject />
