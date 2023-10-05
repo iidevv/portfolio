@@ -14,7 +14,7 @@
     --color-accent: 95 158 160;
   }
   body {
-    @apply text-primary bg-secondary;
+    @apply text-primary bg-secondary flex flex-col min-h-screen;
   }
   .header {
     @apply py-4 bg-secondary/80 backdrop-blur-sm top-0 sticky z-50 shadow-sm shadow-primary/50;
@@ -162,7 +162,7 @@
     @apply py-12
   }
   .footer {
-    @apply bg-primary text-secondary py-2;
+    @apply bg-primary text-secondary py-2 mt-auto;
   }
   .footer__text {
     @apply text-center py-2;

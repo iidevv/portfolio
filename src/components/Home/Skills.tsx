@@ -1,10 +1,10 @@
 import React from 'react';
-import { LanguageIcon, InboxStackIcon, ServerStackIcon, CircleStackIcon, ShareIcon } from '@heroicons/react/24/solid';
+import { LanguageIcon, InboxStackIcon, ServerStackIcon, TableCellsIcon, ShareIcon } from '@heroicons/react/24/solid';
 const Skills = () => {
     const skills = [
         {
             title: "Languages",
-            items: ["HTML, CSS (SCSS, BEM)", "JavaScript (ES6+)", "TypeScript", "PHP"],
+            items: ["HTML, CSS (SCSS, BEM)", "JavaScript (ES6+)", "TypeScript"],
             icon: <LanguageIcon />
         },
         {
@@ -20,7 +20,7 @@ const Skills = () => {
         {
             title: "Databases",
             items: ["MongoDB", "MySQL"],
-            icon: <CircleStackIcon />
+            icon: <TableCellsIcon />
         },
         {
             title: "API",

@@ -10,7 +10,7 @@ export default function Home() {
           <div className="hero__inner">
             <div className="hero__content">
               <h1 className="hero__title">
-                Hi, I'm Ilya!
+                Hi, I&apos;m Ilya!
               </h1>
               <div className="hero__text">
                 <p>
@@ -19,7 +19,7 @@ export default function Home() {
                   and make sure they work well on the inside. <br />
                 </p>
                 <p>
-                  Let's work together and make cool stuff!
+                  Let&apos;s work together and make cool stuff!
                 </p>
               </div>
               <div className="hero__links">
@@ -42,7 +42,7 @@ export default function Home() {
 
               </p>
               <p>
-                Currently on the lookout for opportunities to apply my skills and expand my horizons.
+                Currently open to opportunities to apply my skills and expand my horizons.
                 If you think we can work together, please get in touch.
               </p>
             </div>
@@ -50,7 +50,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="projects" className="projects">
+      {/* <section id="projects" className="projects">
         <div className="site-container">
           <h2 className="section-title">Projects</h2>
         </div>
@@ -60,7 +60,7 @@ export default function Home() {
           <h2 className="section-title">Contact</h2>
           <ContactForm />
         </div>
-      </section>
+      </section> */}
     </main>
   )
 }
