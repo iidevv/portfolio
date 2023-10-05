@@ -161,6 +161,13 @@
   .contact {
     @apply py-12
   }
+  .contact-form {
+    @apply flex flex-col gap-4 w-1/2
+  }
+  .contact-form input,
+  .contact-form textarea {
+    @apply px-3 py-2 rounded-sm
+  }
   .footer {
     @apply bg-primary text-secondary py-2 mt-auto;
   }

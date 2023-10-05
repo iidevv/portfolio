@@ -54,13 +54,13 @@ export default function Home() {
         <div className="site-container">
           <h2 className="section-title">Projects</h2>
         </div>
-      </section>
+      </section> */}
       <section id="contact" className="contact">
         <div className="site-container">
           <h2 className="section-title">Contact</h2>
           <ContactForm />
         </div>
-      </section> */}
+      </section>
     </main>
   )
 }

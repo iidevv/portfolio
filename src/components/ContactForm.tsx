@@ -19,13 +19,28 @@ const ContactForm = () => {
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: FormEvent) => {
+    const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
-        console.log(formData);
+        try {
+            await fetch('/api/send', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+            setFormData({
+                name: '',
+                email: '',
+                message: '',
+            });
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
             <input
                 type="text"
                 id="name"
@@ -33,6 +48,7 @@ const ContactForm = () => {
                 placeholder="Name"
                 value={formData.name}
                 onChange={handleChange}
+                required
             />
 
             <input
@@ -42,12 +58,14 @@ const ContactForm = () => {
                 placeholder="Email"
                 value={formData.email}
                 onChange={handleChange}
+                required
             /><textarea
                 id="message"
                 name="message"
                 placeholder="Message"
                 value={formData.message}
                 onChange={handleChange}
+                required
             />
             <button className="button" type="submit">Submit</button>
         </form>
