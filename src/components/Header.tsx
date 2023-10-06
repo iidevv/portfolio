@@ -24,8 +24,17 @@ const Header = () => {
     ]
 
     useEffect(() => {
-        setMounted(true)
-    }, [])
+        if (!localStorage.getItem('themeSetByUser')) {
+            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            if (prefersDarkScheme && theme !== 'dark') {
+                setTheme('dark');
+            } else if (!prefersDarkScheme && theme !== 'light') {
+                setTheme('light');
+            }
+        }
+        setMounted(true);
+    }, []);
 
     if (!mounted) {
         return null

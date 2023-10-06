@@ -4,17 +4,20 @@
 
 @layer base {
   :root {
-    --color-primary: 38 38 38;
-    --color-secondary: 245 245 245;
+    --color-primary: 20 20 20;
+    --color-secondary: 250 250 250;
     --color-accent: 70 130 180;
   }
   .dark {
-    --color-primary: 217 217 217;
-    --color-secondary: 28 28 28;
+    --color-primary: 255 255 255;
+    --color-secondary: 20 20 20;
     --color-accent: 95 158 160;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply text-primary bg-secondary flex flex-col min-h-screen;
+    @apply text-primary bg-secondary flex flex-col min-h-screen scroll-smooth;
   }
   .header {
     @apply py-4 bg-secondary/80 backdrop-blur-sm top-0 sticky z-50 shadow-sm shadow-primary/50;
@@ -94,6 +97,9 @@
   .hero__title {
     @apply text-3xl font-semibold mb-2;
   }
+  .hero__title span:last-child {
+    @apply block text-lg;
+  }
   .hero__text {
     @apply mb-6;
   }
@@ -101,7 +107,7 @@
     @apply mb-2;
   }
   .hero__content {
-    @apply py-24 sm:py-4;
+    @apply py-32 sm:py-4;
   }
   .hero__object {
     @apply w-1/2 h-48 sm:h-80 absolute right-0 top-0 sm:static;
@@ -156,17 +162,33 @@
     @apply relative list-disc pl-4 z-10;
   }
   .skills__item {
-    @apply w-2/3
+    @apply w-2/3;
+  }
+  .contact__subtitle {
+    @apply text-2xl mb-2;
   }
   .contact {
-    @apply py-12
+    @apply py-12;
+  }
+  .contact-list {
+    @apply flex gap-2;
   }
   .contact-form {
-    @apply flex flex-col gap-4 w-1/2
+    @apply flex flex-col items-start gap-4;
   }
   .contact-form input,
   .contact-form textarea {
-    @apply px-3 py-2 rounded-sm
+    @apply px-3 py-2 rounded-sm w-full shadow-sm;
+  }
+  .contact__inner {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+  }
+  .contact-icon path {
+    @apply fill-primary;
+  }
+
+  .contact-icon:hover path {
+    @apply fill-primary/70;
   }
   .footer {
     @apply bg-primary text-secondary py-2 mt-auto;

@@ -67,7 +67,7 @@ const ContactForm = () => {
                 onChange={handleChange}
                 required
             />
-            <button className="button" type="submit">Submit</button>
+            <button className="button" type="submit">Send Message</button>
         </form>
     );
 }
