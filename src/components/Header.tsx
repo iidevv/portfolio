@@ -23,7 +23,7 @@ const Header = () => {
         },
     ]
 
-    const toggleTheme = () => {
+    const toggleTheme = (theme: string) => {
         const newTheme = theme === 'dark' ? 'light' : 'dark';
         setTheme(newTheme);
         localStorage.setItem('themeSetByUser', 'true');
@@ -36,6 +36,9 @@ const Header = () => {
 
             if (prefersDarkScheme && theme !== 'dark') {
                 setTheme('dark');
+
+                console.log(true);
+                
             } else if (!prefersDarkScheme && theme !== 'light') {
                 setTheme('light');
             }

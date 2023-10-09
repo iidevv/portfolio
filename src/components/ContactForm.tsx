@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, FormEvent } from 'react';
 
-interface FormData {
+type FormData = {
     name: string;
     email: string;
     message: string;
