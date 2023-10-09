@@ -1,12 +1,10 @@
 'use client'
 
-import { useTheme } from "next-themes";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { MoonIcon, SunIcon } from '@heroicons/react/24/solid';
+import { useState } from "react";
+import ThemeSwitcher from "@/components/ThemeSwitcher"
 const Header = () => {
-    const { theme, setTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
+
     const [menuActive, setMenuActive] = useState(false);
     const menuItems = [
         {
@@ -22,34 +20,6 @@ const Header = () => {
             link: "/#contact"
         },
     ]
-
-    const toggleTheme = (theme: string) => {
-        const newTheme = theme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-        localStorage.setItem('themeSetByUser', 'true');
-    };
-
-
-    useEffect(() => {
-        if (!localStorage.getItem('themeSetByUser')) {
-            const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-            if (prefersDarkScheme && theme !== 'dark') {
-                setTheme('dark');
-
-                console.log(true);
-                
-            } else if (!prefersDarkScheme && theme !== 'light') {
-                setTheme('light');
-            }
-        }
-        setMounted(true);
-    }, []);
-
-    if (!mounted) {
-        return null
-    }
-
     return (
         <header className="header">
             <div className="site-container">
@@ -77,12 +47,7 @@ const Header = () => {
                                     <li key={i} className="menu__item"><Link className="menu__link" href={item.link}>{item.name}</Link></li>
                                 ))}
                             </ul>
-                            <button className="theme-switcher" onClick={() => {
-                                toggleTheme(theme === 'dark' ? 'light' : 'dark')
-                            }
-                            }>
-                                {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
-                            </button>
+                            <ThemeSwitcher />
                         </div>
                     </nav>
                 </div>
