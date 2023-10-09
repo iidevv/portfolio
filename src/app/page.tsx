@@ -1,6 +1,7 @@
 import ContactForm from '@/components/ContactForm';
 import HeroObject from '@/components/Home/HeroObject';
 import Skills from '@/components/Home/Skills';
+import { EmailTemplate } from '@/components/EmailTemplate';
 
 export default function Home() {
   return (

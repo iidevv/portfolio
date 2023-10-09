@@ -21,7 +21,8 @@
     "react": "latest",
     "react-dom": "^18.2.0",
     "resend": "^1.1.0",
-    "three": "^0.157.0"
+    "three": "^0.157.0",
+    "vercel": "^32.4.1"
   },
   "devDependencies": {
     "@types/node": "latest",

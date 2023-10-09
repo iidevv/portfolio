@@ -11,15 +11,15 @@ const styles = {
         width: '100%',
         maxWidth: '500px',
         padding: '20px',
-        backgroundColor: '#f0f0f0',
+        backgroundColor: '#fff',
         borderRadius: '8px',
-        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         fontFamily: 'Arial, sans-serif',
         margin: '0 auto'
     },
     header: {
         marginBottom: '20px',
-        color: '#2E86C1',
+        color: '#000',
         fontSize: '24px'
     },
     label: {
@@ -28,8 +28,9 @@ const styles = {
         marginBottom: '5px'
     },
     value: {
-        backgroundColor: '#fff',
+        backgroundColor: '#f3f3f3',
         padding: '10px',
+        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)',
         borderRadius: '4px',
         marginBottom: '20px',
         fontSize: '16px',

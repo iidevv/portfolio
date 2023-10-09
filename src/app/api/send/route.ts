@@ -13,7 +13,7 @@ export async function POST(request: any) {
             from: 'Info <info@iidev.us>',
             to: ['ilya.ilyich1105@gmail.com'],
             reply_to: email,
-            subject: 'New application',
+            subject: 'New Message',
             react: EmailTemplate({ name, email, message }),
             text: ''
         });
