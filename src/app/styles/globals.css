@@ -66,7 +66,7 @@
     @apply hidden sm:flex items-center;
   }
   .menu--active {
-    @apply flex fixed sm:static left-0 w-full py-2 sm:bg-none bg-secondary sm:shadow-none shadow-lg backdrop-blur-sm;
+    @apply flex absolute sm:static left-0 w-full py-2 sm:bg-none bg-secondary sm:shadow-none shadow-lg backdrop-blur-sm;
     top: 100%;
   }
   .menu__list {

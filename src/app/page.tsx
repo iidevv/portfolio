@@ -59,6 +59,10 @@ export default function Home() {
         <div className="site-container">
           <h2 className="section-title">Contact</h2>
           <div className="contact__inner">
+            <div className="contact__form">
+              <h3 className="contact__subtitle">lets talk</h3>
+              <ContactForm />
+            </div>
             <div className="contact__info">
               <h3 className="contact__subtitle">Get in touch with me</h3>
               <p className="mb-4">I am available for full-time positions or freelance.</p>
@@ -100,10 +104,6 @@ export default function Home() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="contact__form">
-              <h3 className="contact__subtitle">lets talk</h3>
-              <ContactForm />
             </div>
           </div>
         </div>

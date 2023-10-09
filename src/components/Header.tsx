@@ -23,6 +23,13 @@ const Header = () => {
         },
     ]
 
+    const toggleTheme = () => {
+        const newTheme = theme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        localStorage.setItem('themeSetByUser', 'true');
+    };
+
+
     useEffect(() => {
         if (!localStorage.getItem('themeSetByUser')) {
             const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -68,7 +75,7 @@ const Header = () => {
                                 ))}
                             </ul>
                             <button className="theme-switcher" onClick={() => {
-                                setTheme(theme === 'dark' ? 'light' : 'dark')
+                                toggleTheme(theme === 'dark' ? 'light' : 'dark')
                             }
                             }>
                                 {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
