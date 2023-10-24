@@ -3,23 +3,10 @@
 import Link from "next/link";
 import { useState } from "react";
 import ThemeSwitcher from "@/components/ThemeSwitcher"
+import { menuItemsData } from '@/lib/data';
 const Header = () => {
 
     const [menuActive, setMenuActive] = useState(false);
-    const menuItems = [
-        {
-            name: "About",
-            link: "/#about"
-        },
-        {
-            name: "Projects",
-            link: "/#projects"
-        },
-        {
-            name: "Contact",
-            link: "/#contact"
-        },
-    ]
     return (
         <header className="header">
             <div className="site-container">
@@ -43,8 +30,14 @@ const Header = () => {
                         </button>
                         <div className={menuActive ? 'menu menu--active' : 'menu'}>
                             <ul className="menu__list">
-                                {menuItems.map((item, i) => (
-                                    <li key={i} className="menu__item"><Link className="menu__link" href={item.link}>{item.name}</Link></li>
+                                {menuItemsData.map((item, i) => (
+                                    <li key={i} className="menu__item">
+                                        <Link
+                                            onClick={() => setMenuActive(!menuActive)}
+                                            className="menu__link" href={item.link}>
+                                            {item.name}
+                                        </Link>
+                                    </li>
                                 ))}
                             </ul>
                             <ThemeSwitcher />
