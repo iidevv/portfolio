@@ -135,7 +135,7 @@
     @apply animate-console-cursor;
   }
   .about {
-    @apply py-6 scroll-mt-12;
+    @apply py-12 scroll-mt-12;
   }
   .about__content {
     @apply mb-12;
@@ -168,7 +168,7 @@
     @apply text-2xl mb-2;
   }
   .contact {
-    @apply py-6 scroll-mt-12;
+    @apply py-12 scroll-mt-12;
   }
   .contact-list {
     @apply flex gap-2;
@@ -205,7 +205,7 @@
   }
 
   .projects__items {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-2;
+    @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4;
   }
 
   .project {

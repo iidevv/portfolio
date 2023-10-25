@@ -49,11 +49,21 @@ export const skillsData = [
 
 export const projectsData = [
     {
+        title: "Visualizer",
+        description: "A versatile tool that operates as a slider, allowing users to overlay various flooring options onto multiple interior scenes. This interactive approach helps in visualizing and choosing the ideal flooring for diverse design settings.",
+        tags: ["React", "Swiper", "PHP", "MySQL"],
+        category: "Full stack",
+        images: ["/projects/visualizer-cover.jpg"],
+        project_link: "",
+        github_link: "https://github.com/iidevv/dmg-inventory"
+
+    },
+    {
         title: "Warehouse",
         description: "A platform that synchronizes stock levels and prices from suppliers, enables product creation using supplier data, and provides automatic variations for seamless inventory management.",
         tags: ["React", "Redux", "MongoDB", "Node.js", "suppliers APIs"],
         category: "Full stack",
-        images: ["/iidev-default.jpg"],
+        images: ["/projects/warehouse-cover.jpg"],
         project_link: "",
         github_link: "https://github.com/iidevv/dmg-inventory"
 
@@ -63,7 +73,7 @@ export const projectsData = [
         description: "Using supplier descriptions, it creates SEO-optimized product listings powered by Chat GPT, ensuring enhanced online visibility and improved search rankings.",
         tags: ["React", "Redux", "Node.js", "ChatGPT API"],
         category: "Full stack",
-        images: ["/iidev-default.jpg"],
+        images: ["/projects/aiseo-cover.jpg"],
         project_link: "",
         github_link: "https://github.com/iidevv/dmg-inventory"
 
@@ -73,17 +83,7 @@ export const projectsData = [
         description: "An efficient platform that captures all order details and facilitates one-click order placement with suppliers, simplifying the entire procurement process.",
         tags: ["React", "Node.js", "Dropshipping APIs"],
         category: "Full stack",
-        images: ["/iidev-default.jpg"],
-        project_link: "",
-        github_link: "https://github.com/iidevv/dmg-inventory"
-
-    },
-    {
-        title: "Visualizer",
-        description: "A versatile tool that operates as a slider, allowing users to overlay various flooring options onto multiple interior scenes. This interactive approach helps in visualizing and choosing the ideal flooring for diverse design settings.",
-        tags: ["React", "Typescript", "PHP", "MySQL"],
-        category: "Full stack",
-        images: ["/iidev-default.jpg"],
+        images: ["/projects/dropshipping-cover.jpg"],
         project_link: "",
         github_link: "https://github.com/iidevv/dmg-inventory"
 
