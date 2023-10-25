@@ -22,7 +22,7 @@ export const Hero = () => {
                         </div>
                         <div className="hero__links">
                             <a className="button button--hero" href="#projects">Projects</a>
-                            <a className="button button--hero button--transparent" target="_blank" rel="noopener noreferrer" href="/ilya.ilyich.min.pdf">Resume</a>
+                            <a className="button button--hero button--transparent" target="_blank" rel="noopener noreferrer" href="/ilya-ilyich-resume.pdf">Resume</a>
                         </div>
                     </div>
                     <HeroObject />
