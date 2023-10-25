@@ -7,6 +7,11 @@ import { menuItemsData } from '@/lib/data';
 const Header = () => {
 
     const [menuActive, setMenuActive] = useState(false);
+    const handleLinkClick = () => {
+        if (window.innerWidth < 480) {
+            setMenuActive(!menuActive);
+        }
+    };
     return (
         <header className="header">
             <div className="site-container">
@@ -33,7 +38,7 @@ const Header = () => {
                                 {menuItemsData.map((item, i) => (
                                     <li key={i} className="menu__item">
                                         <Link
-                                            onClick={() => setMenuActive(!menuActive)}
+                                            onClick={handleLinkClick}
                                             className="menu__link" href={item.link}>
                                             {item.name}
                                         </Link>

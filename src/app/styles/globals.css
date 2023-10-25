@@ -147,7 +147,7 @@
     @apply grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5;
   }
   .skills__block {
-    @apply relative px-2 pt-4 pb-16 sm:pb-10 rounded-sm bg-white dark:bg-white/10 transition-all shadow-sm hover:shadow-md;
+    @apply relative px-2 pt-4 pb-16 sm:pb-10 rounded-sm bg-white dark:bg-white/10 transition-shadow shadow-sm hover:shadow-md;
   }
   .skills__block:hover svg {
     @apply fill-primary;
@@ -179,6 +179,9 @@
   .contact-form input,
   .contact-form textarea {
     @apply px-3 py-2 rounded-sm w-full shadow-sm;
+  }
+  .contact-form__info {
+    @apply p-1 border;
   }
   .contact__inner {
     @apply grid grid-cols-1 md:grid-cols-2 gap-8;

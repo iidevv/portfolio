@@ -5,6 +5,7 @@ type FormData = {
     name: string;
     email: string;
     message: string;
+    info: string;
 }
 
 const ContactForm = () => {
@@ -12,6 +13,7 @@ const ContactForm = () => {
         name: '',
         email: '',
         message: '',
+        info: ''
     });
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,21 +23,35 @@ const ContactForm = () => {
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
+        setFormData((prevState) => ({
+            ...prevState,
+            info: 'Sending...'
+        }));
         try {
-            await fetch('/api/send', {
+            const response = await fetch('/api/send', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(formData),
             });
+
+            if (!response.ok) {
+                throw new Error('Server responded with an error');
+            }
+
             setFormData({
                 name: '',
                 email: '',
                 message: '',
+                info: 'Thank you! I\'ll be in touch soon.'
             });
         } catch (error) {
             console.log(error);
+            setFormData((prevState) => ({
+                ...prevState,
+                info: 'Error. Please try again.'
+            }));
         }
     };
 
@@ -68,6 +84,9 @@ const ContactForm = () => {
                 required
             />
             <button className="button" type="submit">Send Message</button>
+            {formData.info &&
+                <span className="contact-form__info">{formData.info}</span>
+            }
         </form>
     );
 }
