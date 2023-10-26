@@ -217,7 +217,7 @@
   }
   .projects__items div:nth-child(4n-1) .project,
   .projects__items div:nth-child(4n) .project {
-    @apply flex dark:xl:bg-primary/10 xl:flex-row-reverse;
+    @apply flex dark:bg-primary/10 xl:flex-row-reverse;
   }
   .project__info {
     @apply p-4 xl:w-1/2 flex flex-col h-full;
