@@ -47,18 +47,16 @@ export const Project = ({
                             <li key={tag}>{tag}</li>
                         ))}
                     </ul>
-                    <ul className="project__links">
-                        {project_link !== "" &&
-                            <li><a href={project_link} target="_blank" rel="noopener noreferrer"></a></li>
-                        }
-                        {github_link !== "" &&
-                            <li><a href={github_link} target="_blank" rel="noopener noreferrer"></a></li>
-                        }
-                    </ul>
                 </div>
-                <div className="project__image">
-                    <Image src={images[0]} alt={`Project ${title}`} width={300} height={300} layout="responsive" />
-                </div>
+                {github_link ?
+                    <a target="_blank" href={github_link} className="project__image">
+                        <Image src={images[0]} alt={`Project ${title}`} width={300} height={300} layout="responsive" />
+                    </a>
+                    :
+                    <div className="project__image">
+                        <Image src={images[0]} alt={`Project ${title}`} width={300} height={300} layout="responsive" />
+                    </div>
+                }
             </article >
         </motion.div>
     )

@@ -55,7 +55,7 @@ export const projectsData = [
         category: "Full stack",
         images: ["/projects/visualizer-cover.jpg"],
         project_link: "",
-        github_link: "https://github.com/iidevv/dmg-inventory"
+        github_link: "https://github.com/iidevv/visualizer"
 
     },
     {
@@ -75,7 +75,7 @@ export const projectsData = [
         category: "Full stack",
         images: ["/projects/aiseo-cover.jpg"],
         project_link: "",
-        github_link: "https://github.com/iidevv/dmg-inventory"
+        github_link: "https://github.com/iidevv/dmg-inventory/blob/main/client/src/redux/reducers/pu-product-reducer.js"
 
     },
     {
@@ -85,7 +85,7 @@ export const projectsData = [
         category: "Full stack",
         images: ["/projects/dropshipping-cover.jpg"],
         project_link: "",
-        github_link: "https://github.com/iidevv/dmg-inventory"
+        github_link: "https://github.com/iidevv/dmg-inventory/blob/main/server/src/routes/dropship.js"
 
     },
     {
@@ -105,6 +105,6 @@ export const projectsData = [
         category: "Backend",
         images: ["/iidev-default.jpg"],
         project_link: "",
-        github_link: "https://github.com/iidevv/dmg-inventory"
+        github_link: "https://github.com/iidevv/dmg-inventory/blob/main/server/src/routes/external/imgs-optimization.js"
     }
 ] as const;
