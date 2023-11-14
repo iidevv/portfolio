@@ -5,23 +5,32 @@ import Image from 'next/image'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
 type ProjectProps = {
+    id: number,
     title: string,
     description: string,
     tags: readonly string[],
     category: string,
+    thumbnail: string,
     images: readonly string[],
     project_link: string,
-    github_link: string
+    github_link: string,
+    setModalOpen: React.Dispatch<React.SetStateAction<{
+        id: number;
+        isOpen: boolean;
+    }>>
 }
 
 export const Project = ({
+    id,
     title,
     description,
     tags,
     category,
+    thumbnail,
     images,
     project_link,
-    github_link
+    github_link,
+    setModalOpen
 }: ProjectProps) => {
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
@@ -38,25 +47,24 @@ export const Project = ({
                 scale: scaleProgress,
             }}
         >
-            <article className="project" >
+            <article className="project" onClick={() => {
+                setModalOpen({
+                    id,
+                    isOpen: true,
+                })
+            }}>
+                <div className="project__image">
+                    <Image src={thumbnail} alt={`Project ${title}`} width={300} height={400} />
+                </div>
                 <div className="project__info">
                     <h3 className="project__title">{title}</h3>
                     <p className="project__description">{description}</p>
-                    <ul className="project__tags">
+                    {/* <ul className="project__tags">
                         {tags.map(tag => (
-                            <li key={tag}>{tag}</li>
+                            <li>{tag}</li>
                         ))}
-                    </ul>
+                    </ul> */}
                 </div>
-                {github_link ?
-                    <a target="_blank" href={github_link} className="project__image">
-                        <Image src={images[0]} alt={`Project ${title}`} width={300} height={300} layout="responsive" />
-                    </a>
-                    :
-                    <div className="project__image">
-                        <Image src={images[0]} alt={`Project ${title}`} width={300} height={300} layout="responsive" />
-                    </div>
-                }
             </article >
         </motion.div>
     )

@@ -137,13 +137,14 @@
   .about {
     @apply py-12 scroll-mt-12;
   }
-  .about__content {
-    @apply mb-12;
-  }
+
   .about__content p:first-child {
     @apply indent-4 mb-1;
   }
   .skills {
+    @apply py-12;
+  }
+  .skills__blocks {
     @apply grid grid-cols-1 md:grid-cols-3 xl:grid-cols-5 gap-5;
   }
   .skills__block {
@@ -205,45 +206,73 @@
   }
 
   .projects__items {
-    @apply grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-4;
+    @apply grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-4;
   }
 
   .project {
-    @apply flex flex-col-reverse h-full xl:flex-row bg-white shadow-lg hover:shadow-xl transition;
-  }
-  .projects__items div:nth-child(4n-3) .project,
-  .projects__items div:nth-child(4n-2) .project {
-    @apply flex dark:bg-primary/10;
-  }
-  .projects__items div:nth-child(4n-1) .project,
-  .projects__items div:nth-child(4n) .project {
-    @apply flex dark:bg-primary/10 xl:flex-row-reverse;
+    @apply flex flex-col h-full bg-secondary dark:bg-primary/10 shadow-lg hover:shadow-xl transition cursor-pointer;
   }
   .project__info {
-    @apply p-4 xl:w-1/2 flex flex-col h-full;
+    @apply p-4 w-full flex flex-col h-full;
   }
   .project__image {
-    @apply xl:w-1/2;
+    @apply w-full bg-primary;
   }
   .project__image img {
-    @apply rounded-sm;
+    @apply mx-auto;
   }
   .project__title {
     @apply text-lg uppercase font-semibold tracking-wider mb-1;
   }
   .project__description {
-    @apply mb-auto pb-2;
+    @apply truncate mb-auto pb-2;
   }
-  .project__tags {
+  .modal__tags {
     @apply flex flex-wrap gap-1;
   }
-  .project__tags li {
-    @apply text-xs font-semibold uppercase text-sm tracking-wider hover:text-primary/70;
+  .modal__tags li {
+    @apply text-xs font-semibold uppercase tracking-wider hover:text-primary/70;
   }
-  .project__tags li::before {
+  .modal__tags li::before {
     content: "#";
   }
-  .project__tags li:not(:last-child)::after {
+  .modal__tags li:not(:last-child)::after {
     content: ",";
+  }
+  .modal {
+    @apply animate-popup flex flex-col fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary/100 w-full max-w-[700px] max-h-[96vh] outline-none;
+  }
+  .modal__header {
+    @apply flex items-center px-6 py-2 shadow-md;
+  }
+  .modal-overlay {
+    @apply fixed top-0 left-0 w-full h-full bg-primary/50 z-50 overflow-hidden backdrop-blur-sm;
+  }
+  .modal__close {
+    @apply ml-auto w-10;
+  }
+  .modal__inner {
+    @apply px-6 pt-6 pb-14 h-[96vh] overflow-y-auto;
+  }
+  .modal__title {
+    @apply text-2xl mr-1;
+  }
+  .modal__description {
+    @apply whitespace-pre-line mb-4;
+  }
+  .modal__subtitle {
+      @apply block mb-2;
+  }
+  .modal__tags {
+      @apply mb-4;
+  }
+  .modal__images {
+    @apply mb-6
+  }
+  .modal__images img  {
+    @apply w-full mb-2 last:mb-0
+  }
+  .body-fixed {
+    @apply overflow-hidden;
   }
 }

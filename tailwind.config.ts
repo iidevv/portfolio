@@ -10,12 +10,17 @@ const config: Config = {
   theme: {
     animation: {
       'console-cursor': 'console-cursor 2s ease-in-out infinite',
+      'popup': 'popup .15s ease-in-out',
     },
     keyframes: {
       'console-cursor': {
         '0%': { opacity: '0' },
         '50%': { opacity: '1' },
         '100%': { opacity: '0' },
+      },
+      'popup': {
+        '0%': { opacity: '0' },
+        '100%': { opacity: '1' },
       },
     },
     screens: {
