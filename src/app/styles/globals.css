@@ -138,8 +138,8 @@
     @apply py-12 scroll-mt-12;
   }
 
-  .about__content p:first-child {
-    @apply indent-4 mb-1;
+  .about__content a {
+      @apply underline hover:no-underline;
   }
   .skills {
     @apply py-12;
@@ -240,7 +240,7 @@
     content: ",";
   }
   .modal {
-    @apply animate-popup flex flex-col fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary/100 w-full max-w-[700px] max-h-[96vh] outline-none;
+    @apply animate-popup flex flex-col fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-secondary/100 w-full max-w-[700px] max-h-[86vh] outline-none;
   }
   .modal__header {
     @apply flex items-center px-6 py-2 shadow-md;
@@ -252,7 +252,7 @@
     @apply ml-auto w-10;
   }
   .modal__inner {
-    @apply px-6 pt-6 pb-14 h-[96vh] overflow-y-auto;
+    @apply px-6 pt-6 pb-14 h-[86vh] overflow-y-auto;
   }
   .modal__title {
     @apply text-2xl mr-1;

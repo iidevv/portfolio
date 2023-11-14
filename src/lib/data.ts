@@ -144,7 +144,7 @@ export const projectsData = [
         id: 4,
         title: "GT Safety website",
         description: `
-        - from figma to html
+        - From figma to html
         - interactive map
         - animations
         - seo optimization
@@ -177,7 +177,7 @@ export const projectsData = [
         id: 6,
         title: "Express Service website",
         description: `
-        - from figma to wordpress(woocommerce)
+        - From figma to wordpress(woocommerce)
         - seo optimization
         - pagespeed optimization
         `,
@@ -192,7 +192,7 @@ export const projectsData = [
         id: 7,
         title: "Sims auto website",
         description: `
-        - vehicle configurator
+        - Vehicle configurator
         - seo optimization
         - pagespeed optimization
         `,
