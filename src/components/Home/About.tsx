@@ -11,7 +11,7 @@ export const About = () => {
                             I’m a developer with experience in building websites & apps for small and medium sized businesses. Whether you’re trying to win work, list your services or even create a whole online store – I can help!
                         </p>
                         <p>
-                            Experienced in <strong>HTML, CSS, JS, React, Redux, Node.js, MongoDB</strong>. I also have experience with <strong>PHP, MySQL</strong>, and WordPress systems
+                            Experienced in <strong>HTML, CSS, JS, React, Redux, Node.js, MongoDB</strong>. I also have experience with <strong>PHP, MySQL</strong>, and WordPress (WooCommerce) systems
                         </p>
                         <p>
                             Currently open to opportunities to apply my skills and expand my horizons.
