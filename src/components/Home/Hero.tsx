@@ -18,7 +18,7 @@ export const Hero = () => {
                                 My focus is on delivering robust and innovative digital solutions. I am keen to collaborate on challenging projects to create outstanding results.
                             </p>
                             <p>
-                                Let's work together to bring your ideas to life!
+                                Let&apos;s work together to bring your ideas to life!
                             </p>
                         </div>
                         <div className="hero__links">
